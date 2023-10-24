@@ -22,18 +22,17 @@ Upon connecting, your socket will receive a Command ([[Myko API#WSMCommand]]) th
 Please include this as `clientId` on any [[#Types]] that include the field
 ### Set Info
 
-When the `clientId` is set, Send Events ([[Myko API#WSMEvent]]) to `SET` any relevant types. Remember, this executor is the source of truth for these entities, so change them as they update, and 
+When the `clientId` is set, Send Events [Events](./Myko%20API.md) to `SET` any relevant types. Remember, this executor is the source of truth for these entities, so change them as they update, and 
 
-For each [[#Target]], a [[#Target Status]] is required to set it as `online` for it to be displayed as such in the Rocketship UI
+For each [Target](#target), a [Target Status](#targetstatus) is required to set it as `online` for it to be displayed as such in the Rocketship UI
 
 It is best practice to handle websocket reconnect logic, and resend all entities whenever your socket opens, as it will be given a new `clientId` at that time. 
 
----
 ## Types   
 
-a brief description and the required fields (represented as JSON) for the relevant entity types are below
+a brief description and the required fields (represented as Ts Types) for the relevant entity types are below
 
-Please refer to the [[Myko API#MItem]] docs for important information about each item's `hash`
+Please refer to the [Myko Docs](./Myko%20API.md) docs for important information about each item's `hash`
 
 ### Instance
 Instances describe the running copy of your Service, under the responsibility of your executor. These should be identified uniquely as follows
@@ -41,7 +40,7 @@ Instances describe the running copy of your Service, under the responsibility of
 - If more than one copy of the same Service is running under control of 2 different executors, they should also be uniquely identified. 
 - If *the same* copy of your Service is find-able by more than one executor(fairly unlikely), it should only have one id to represent the actual topology of your network. 
 
-```JSON
+```ts
 {
 	id: string, 
 	hash: string,
@@ -55,7 +54,7 @@ Instances describe the running copy of your Service, under the responsibility of
 ### Target
 These are the main unit of control in your system. They represent an entity that, generally speaking, is in one of many states at a time. This is not a harsh restriction, but is a good general guideline for what should be a Target. 
 
-```JSON
+```ts
 {
 	id: string, 
 	hash: string,
@@ -75,17 +74,18 @@ These are the main unit of control in your system. They represent an entity that
 ### TargetStatus
 Targets can be 'online' or 'offline' depending on whether their respective instances are started/available/open/etc. Targets Default to Offline
 
-```json
+```ts
 {
 	targetId: ID,
 	instanceId: ID,
 	status: 'online' | 'offline'
 }
 ```
+
 ### Action
 These represent an action that your Target can take. These will be invoked later by the core, and are the main mechanism for changing the state of the target. A Target may have as many actions as you like, and every Action belongs to exactly one Target. Actions associated with one Target should *not* affect the state of another Target, unless that second target is a `subTarget` of the first target
 
-```JSON
+```ts
 {
 	id: string, 
 	hash: string,
@@ -99,7 +99,7 @@ These represent an action that your Target can take. These will be invoked later
 ### Emitter
 These are the publishers of state changes, or other impulses that can be consumed by the core. They can be thought of like topics or subscription subjects. 
 
-```JSON
+```ts
 {
 	id: string, 
 	hash: string,
@@ -112,7 +112,7 @@ These are the publishers of state changes, or other impulses that can be consume
 ### Pulse
 Pulses are a data update of a Emitter. They belong to exactly one Emitter, and optionally carry data. 
 
-```JSON
+```ts
 {
 	id: string, //this must be the same as the emitterId
 	hash: string,
@@ -126,7 +126,7 @@ Pulses are a data update of a Emitter. They belong to exactly one Emitter, and o
 
 Providing a Target might look like this
 
-```JSON
+```ts
 {
 	event: "ws:m:event",
 	data: {

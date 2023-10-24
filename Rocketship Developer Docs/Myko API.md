@@ -1,7 +1,4 @@
----
-share: true
-category: libs
----
+# Myko
 
 Myko is an event sourcing library. Myko Servers host WebSocket gateways for clients to connect, and persist and sync data between server cluster members.
 # Types
@@ -16,7 +13,7 @@ these are the smallest unit as far as Myko is concerned. They have the minimum o
 
 > NOTE: the hash for each item can be omitted, and will be computed when the [[#MEvent]] that sets the item hits the server. It can, be provided if you would like to additionally limit recalculation, for example if there are fields which may change that do not warrant an update in the server. 
 
-``` JSON
+``` ts
 {
 	id: "string", 
 	hash: "string"
@@ -26,9 +23,9 @@ these are the smallest unit as far as Myko is concerned. They have the minimum o
 
 ### MWrappedItem
 
-An [[#MItem]] wrapped with the string representation of it's type name. Necessary for including type information 
+An [MItem](#mitem) wrapped with the string representation of it's type name. Necessary for including type information 
 
-```JSON
+```ts
 {
 	itemType: string, // entity name
 	item: {
@@ -39,9 +36,9 @@ An [[#MItem]] wrapped with the string representation of it's type name. Necessar
 
 ### MEvent
 
-Events extend the [[#MWrappedItem]], and are the source of truth for the history of Items. They are reduced by the Myko Servers to maintain their latest state. All Events are persisted for replay, and rollback by the servers. They are their own wrapped version, since they require no additional metadata
+Events extend the [MWrappedItem](#mwrappeditem), and are the source of truth for the history of Items. They are reduced by the Myko Servers to maintain their latest state. All Events are persisted for replay, and rollback by the servers. They are their own wrapped version, since they require no additional metadata
 
-```JSON
+```ts
 {
 	item: {...}, // the full item
 	itemType: string,
@@ -56,7 +53,7 @@ Events extend the [[#MWrappedItem]], and are the source of truth for the history
 
 Queries are a request for data, which will be 
 
-```JSON
+```ts
 {
 	queryId: string, // query idenfier
 	queryItemType: string, // itemType expected to return
@@ -72,7 +69,7 @@ Queries are a request for data, which will be
 
 Commands are a request to mutate state
 
-```JSON
+```ts
 {
 	commandId: string, // command identifier 
 	command: {
@@ -81,8 +78,6 @@ Commands are a request to mutate state
 	}
 }
 ```
-
-
 
 ## WebSocket Api
 
@@ -96,9 +91,9 @@ Connect to the Myko Server at `ws://SERVER_IP:5155/myko`
 
 ### WSMEvent
 
-wraps an [[#MEvent]]
+wraps an [MEvent](#mevent)
 
-```JSON
+```ts
 {
 	event: "ws:m:event",
 	data: {
@@ -112,7 +107,7 @@ wraps an [[#MEvent]]
 
 ### WSMCommand    
 
-```JSON
+```ts
 {
 	event: "ws:m:command", 
 	data: {
@@ -125,7 +120,7 @@ wraps an [[#MEvent]]
 
 ### WSMCommandResponse   
 
-```JSON
+```ts
 {
 	event: "ws:m:command-response",
 	tx: string, // unique transaction id to match with command
@@ -137,7 +132,7 @@ wraps an [[#MEvent]]
 
 ### WSMQuery   
 
-```JSON
+```ts
 {
 	event: "ws:m:query",
 	data: {
@@ -149,7 +144,7 @@ wraps an [[#MEvent]]
 
 ### WSMQueryResponse   
 
-```JSON
+```ts
 {
 	event: "ws:m:query-response",
 	tx: string, // unique transaction id to match with query
