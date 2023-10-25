@@ -1,0 +1,17 @@
+[book]
+authors = []
+language = "en"
+multilingual = false
+src = "src"
+
+[build]
+create-missing = false
+
+[preprocessor.fs-summary]
+# (default: true)
+clean-paths = true
+
+# other preprocessors will naturally need to 
+# run after the summary has been generated 
+[preprocessor.links]
+after = ["fs-summary"] 

@@ -1,3 +1,0 @@
-# Rocketship Documentation
-
-
