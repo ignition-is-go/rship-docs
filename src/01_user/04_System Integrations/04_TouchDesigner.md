@@ -15,3 +15,16 @@
 8. To export the output of a node to a custom parameter, activate the node, drag it to the parameter name, and choose 'Export'.
 
 **NOTE: If Targets/SubTargets are not appearing in Rocketship, navigate to the 'rship' BaseCOMP and pulse Reconnect.**
+
+# TouchDesigner Targets, Actions, and Emitters
+
+- Targets
+	- BaseCOMPs
+		- Actions
+			- Activate
+			- Deactivate
+	- Custom parameters
+		- Actions
+			- Set value
+		- Emitters
+			- Publish value

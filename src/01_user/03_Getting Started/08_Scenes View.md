@@ -1,6 +1,8 @@
 # Scenes
 
-In **Scenes** view, you can create and edit different **Scenes**.
+Scenes 
+
+In **Scenes** view, you can create and edit different Scenes.
 
 Editing a **Scene** brings you to its **Node Graph** and **Timeline**.
 
@@ -12,6 +14,5 @@ Scenes can have one or many asynchronously running Timelines, or no Timelines at
 
 A Timeline is where you can sequence keyframes that set values and call functions of Nodes in the Scene.
 
-A Scene gets placed in real time in the [[3.11 Scheduling](Scheduling View)]
-. 
+A Scene gets placed in real time in the [[3.11 Scheduling](Scheduling View)].
 

@@ -31,3 +31,16 @@ Rocketship's Unreal Engine integration is facilitated by the Rship-Unreal plugin
 7. Send the **Bundle**.
 8. Verify that the value changes in Unreal Engine.
 
+# Unreal Targets, Actions, and Emitters
+​
+- Targets:
+	- Actors
+		- Emitters:
+			- 3d position
+			- 3d velocity
+		- Actions:
+			- Actor parameters
+	- Levels
+		- Emitters:
+		- Actions:
+			- Level streaming

@@ -1,41 +1,43 @@
 
 # System Overview
 
-Rocketship is a centralized control platform for handling realtime reactive event relationships within networks of integrated subsystems. 
+Rocketship is a centralized control platform for orchestrating realtime reactive event relationships within networks of integrated systems. It provides an abstract, system-agnostic language and interface for defining and managing event relationships that lowers the technical barrier for designing interactive environments, and facilitates a more flexible and intuitive creative process.
 
-A subsystem or **Machine** runs a local **Executor** that connects with Rocketship via WebSocket. The **Executor** publishes a list of **Targets** that represent entities within the subsystem. A **Target** publishes a list of **Emitters** (observers of state changes) and **Actions** (mechanisms of state changes). An **Emitter** publishes **Pulses** that represent state changes, and optionally carry data.
+A physical device or **Machine** runs a local process called an **Executor**, that establishes a WebSocket client and connects to the Rocketship Core. An **Executor** publishes a list of **Targets** that represent interactable entities. A **Target** in turn holds a list of **Emitters**, which observe and report state changes, and **Actions**,  which provide commands for changing state.
+
+Reactive event relationships are made by creating **Bindings** between **Emitters** and **Actions**
+
 ### Components
 
-- **Rocketship**: The centralized control platform.
-- **Machine**: A subsystem connected to Rocketship.
-- **Executor**: Local runtime within a Machine, connects to Rocketship via WebSocket.
-	- **Service**: project file
-	- **Instance**: copy of a project file
-	- **Cluster**: grouped copies of the same Executor
-- **Target**: Entity within a subsystem, managed by the Executor.
-- **Emitter**: Observes state changes within a Target or SubTarget.
-- **Action**: Mechanism for changing states within a Target or SubTarget.
-- **Pulse**: Represents a state change, emitted by an Emitter.
+- **Rocketship Core**: A centralized server, responsible for federating connected systems. (Can scale horizontally)
 
-### Structure
+- **Machine**: A physical hardware device that runs an Instance.
 
-1. Executors running on Machines connect to Rocketship.
-2. Executors publishes hierarchies of Targets and SubTargets.
-3. Targets and SubTargets have Emitters and Actions.
-4. Emitters emit Pulses.
-5. Rocketship invokes Actions on Targets of Executors.
+- **Executor**: A local process running on a Machine that connects to the Rocketship Core and defines a Service schema.
 
-For more information, consult the [Myko API] and [Rocketship Executor API].
+- **Instance**: A copy of a Service, that ties a Service to an Executor.
 
-## System Design
+NOTE: For some software, an Instance can be directly turned into an Executor with the addition of a plugin or module (e.g. Unreal Engine, TouchDesigner); for other software, the Executor must run as a separate process from the Instance (e.g. Pixera, Disguise). This decision is dependant on a per-integration basis, depending on the available software API. 
 
-### Web Stack:
+- **Cluster**: A group of Instances of the same Service.
 
-1. One/Many Linux Servers
-2. Docker
-3. Docker Swarm
-4. Kafka
-5. Svelte
+NOTE: The Service abstraction layer allows the same Targets to belong to multiple Instances. Because Instances are ephemeral, Services are the persistent entity that own Targets, Actions, and Emitters.
 
+- **Session**: A configuration of the above entities. A project can have multiple Sessions.
 
+- **Target**: An interactable entity; the logical unit of control in a connected system.
+	- **Emitter**: An observer and reporter of state changes for a Target.
+		- **Pulse**: A momentary state change, broadcasted by an Emitter.
+	- **Action**: A command for changing the state of a Target.
+		- **Payload**: The data sent to execute an Action.
 
+- **Binding**: A reactive event relationship made by connecting an Emitter to an Action.
+
+- **Scene**: Encapsulates a set of Bindings; the logical unit of design.
+	- **Scene Graph**: The interface for creating Bindings using Nodes.
+	- **Node**: A unit of programming that lives on the Scene Graph; Emitters and Actions are Nodes, and there also exist a set of general Utility Nodes for creating more complex Bindings, as well as building other Scenes on or off.
+	- **Event Track**: Each Scene has a local Event Track, which allows the Scene Graph to be modified over time.
+
+- **Calendar**: The global, macro time where Scenes are scheduled to be activated and deactivated.
+
+For more information, consult the [Rocketship Executor API](./02_Rocketship%20Executor%20API.md) and [Myko API](./03_Myko%20API.md).

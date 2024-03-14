@@ -19,7 +19,7 @@ Upon connecting, your socket will receive a Command ([[Myko API#WSMCommand]]) th
 Please include this as `clientId` on any [[#Types]] that include the field
 ### Set Info
 
-When the `clientId` is set, Send Events [Events](./Myko%20API.md) to `SET` any relevant types. Remember, this executor is the source of truth for these entities, so change them as they update, and 
+When the `clientId` is set, Send Events [Events](./03_Myko%20API.md) to `SET` any relevant types. Remember, this executor is the source of truth for these entities, so change them as they update, and 
 
 For each [Target](#target), a [Target Status](#targetstatus) is required to set it as `online` for it to be displayed as such in the Rocketship UI
 
@@ -29,7 +29,7 @@ It is best practice to handle websocket reconnect logic, and resend all entities
 
 a brief description and the required fields (represented as Ts Types) for the relevant entity types are below
 
-Please refer to the [Myko Docs](./Myko%20API.md) docs for important information about each item's `hash`
+Please refer to the [Myko API](./Myko%20API.md) docs for important information about each item's `hash`
 
 ### Instance
 Instances describe the running copy of your Service, under the responsibility of your executor. These should be identified uniquely as follows
