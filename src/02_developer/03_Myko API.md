@@ -10,7 +10,7 @@ All Myko types have a pure data and are wrapped up with some metadata. This allo
 
 #### MItem
 
-these are the smallest unit as far as Myko is concerned. They have the minimum of the data below. It should be exended for each entity type your application cares about. 
+these are the smallest unit as far as Myko is concerned. They have the minimum of the data below. It should be extended for each entity type your application cares about. 
 
 > NOTE: the hash for each item can be omitted, and will be computed when the [[#MEvent]] that sets the item hits the server. It can, be provided if you would like to additionally limit recalculation, for example if there are fields which may change that do not warrant an update in the server. 
 

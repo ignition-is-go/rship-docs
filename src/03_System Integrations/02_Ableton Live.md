@@ -1,29 +1,22 @@
-# Installation
+# Ableton Live
 
-Rocketship can receive **Emitters** from, and take **Actions** on, Ableton Live. There are a few different pieces of software that work together to make this possible:
+Ableton Live integrates with Rocketship using a Max for Live device and a sidecar application in tandem.
 
-### Ableton
+The Max for Live Device can be added to any track in the set, and recursively iterates through the Live Object Model to surface the Targets, Actions, and Emitters of the live set.
 
-- You MUST name your scenes in Ableton in order for them to show up in Rocketship
+The sidecar application runs separately and bridges the connection between Ableton Live and Rocketship.
 
-### RshipAbletonControlSurface
+## Installation
 
-The Ableton Live API is partially exposed by a custom control surface script. Download the script folder and place it in the correct directory according to your OS.
+**Rship Device**
 
-Windows: "C:/Users/[User]/Documents/Ableton/User Library/Remote Scripts/"
-Mac: "/Users/[User]/Music/Ableton/User Library/Remote Scripts"
+Download the 'rship' M4L device and add it to any track in the live set.
 
-Restart or open Ableton and navigate to Options -> Preferences -> Link and add the Rship control surface.
+**Sidecar App**
 
-### Max for Live
+Download the 'Rship-Ableton' sidecar app and run it. Enter the address and port of a Rocketship server and connect.
 
-Other elements of the Ableton Live API that are not exposed by AbletonJS, are instead exposed by a Max for Live device. The device must be added to every track you wish to observe/control from Rocketship.
-
-### The Sidecar App
-
-Lastly, an Electron app running alongside Ableton Live handles the connection with Rocketship, and also provides connection status indicators and an event log.
-
-# Ableton Targets, Actions, and Emitters
+# Targets, Actions, and Emitters
 
 - Targets:
 	- Song:

@@ -3,11 +3,17 @@
 
 Rocketship is a centralized control platform for orchestrating realtime reactive event relationships within networks of integrated systems. It provides an abstract, system-agnostic language and interface for defining and managing event relationships that lowers the technical barrier for designing interactive environments, and facilitates a more flexible and intuitive creative process.
 
+## Basic Workflow
+
 A physical device or **Machine** runs a local process called an **Executor**, that establishes a WebSocket client and connects to the Rocketship Core. An **Executor** publishes a list of **Targets** that represent interactable entities. A **Target** in turn holds a list of **Emitters**, which observe and report state changes, and **Actions**,  which provide commands for changing state.
 
-Reactive event relationships are made by creating **Bindings** between **Emitters** and **Actions**
+Reactive event relationships are made by creating **Bindings** between **Emitters** and **Actions**, and are encapsulated by **Scenes** using the **Scene Graph**.
 
-### Components
+**Scenes** optionally have local **Event Tracks**, which allow precise control over how the **Scene** evolves in micro-time.
+
+**Scenes** are optionally placed onto the **Calendar**, which schedules their activation and deactivation in global, macro-time.
+
+## Components
 
 - **Rocketship Core**: A centralized server, responsible for federating connected systems. (Can scale horizontally)
 
