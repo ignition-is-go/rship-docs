@@ -9,7 +9,7 @@ create-missing = false
 
 [preprocessor.fs-summary]
 # (default: true)
-clean-paths = true
+clean-paths = false
 
 # other preprocessors will naturally need to 
 # run after the summary has been generated 

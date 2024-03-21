@@ -1,0 +1,6 @@
+# Connecting Systems to Rocketship
+
+In order to access the monitoring and control interface for setting up and orchestrating reactive event relationships between different Executors, connect to a Rocketship Server in a web browser to load the GUI. Open up a Chrome-based browser and navigate to the host address of the server you wish to connect to. 
+
+Being able to load the control GUI of any Rocketship Server from a browser client is part of the decentralized nature of Rocketship, and automatically enables many useful features. You can open as many copies of the client in as many windows or tabs you would like, which makes window management natural and intuitive for anyone who has ever used a browser before (see also [Sessions] and [Window Groups]). 
+You can also open the client from any computer on the same network as the server, which makes multi-user viewing/editing inherent. Everybody working on a project, regardless of their department or role, can easily open the client to view and/or edit the same monitoring and control interface as everybody else (permissions can be set to manage view/edit access for teams and individuals).  

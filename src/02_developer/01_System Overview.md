@@ -48,4 +48,4 @@ Finally, Scenes are optionally placed onto the **Calendar**, which schedules the
 
 - **Calendar**: The global, macro time where Scenes are scheduled to be activated and deactivated.
 
-> For more technical information, please consult the [Rocketship Executor API](./Rocketship%20Executor%20API.md) and [Myko API](./Myko%20API.md).
+> For more technical information, please consult the [Rocketship Executor API](./02_Rocketship%20Executor%20API.md) and [Myko API](./03_Myko%20API.md).
