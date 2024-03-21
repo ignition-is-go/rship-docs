@@ -1,3 +1,5 @@
+# What, why, and how?
+
 ## What is Rocketship?
 
 Rocketship is a centralized control platform for orchestrating and monitoring realtime reactive event relationships within networks of integrated multimedia systems. By providing an abstracted, system-agnostic language and interface, Rocketship makes it easy and intuitive to set up and iteratively design immersive experiences. 
