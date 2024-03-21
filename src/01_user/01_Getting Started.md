@@ -17,17 +17,17 @@ And that's it! You've designed your first realtime reactive event relationship b
 
 Immersive experiences are made up of many relationships, both simple and complex, between lots of different systems, and make use of additional features for managing and orchestrating how an immersive experience unfolds. 
 
-Maybe you want to have lots of Scenes that encapsulate different sets of reactive event relationships, like moments in a live show or modes of an installation?    
-See [Managing Scenes](./02_Managing%20Scenes.md).
+> Maybe you want to have lots of Scenes that encapsulate different sets of reactive event relationships, like moments in a live show or modes of an installation?    
+> See [Managing Scenes](./02_Managing%20Scenes.md).
 
-Maybe you want to control how Scenes evolve over time, and schedule them on a calendar?    
-See [Managing Time](./03_Managing%20Time.md).
+> Maybe you want to control how Scenes evolve over time, and schedule them on a calendar?    
+> See [Managing Time](./03_Managing%20Time.md).
 
-Maybe you want to separate 'pre-viz', 'rehearsal', and 'live' versions of your project?    
-See [Managing Sessions](./04_Managing%20Sessions.md).
+> Maybe you want to separate 'pre-viz', 'rehearsal', and 'live' versions of your project?    
+> See [Managing Sessions](./04_Managing%20Sessions.md).
 
-Maybe you want to scope access and permissions for individuals and teams?    
-See [Managing Projects](./05_Managing%20Projects.md) 
+> Maybe you want to scope access and permissions for individuals and teams?    
+> See [Managing Projects](./05_Managing%20Projects.md) 
 
 ## Troubleshooting
 

@@ -16,4 +16,19 @@ From a creative design perspective, Rocketship facilitates a faster, more agile,
 
 ## How is Rocketship?
 
-See Getting Started...
+Data Model:
+
+- Projects
+    - Sessions
+    - Scenes
+        - Nodes
+            - Targets
+                - Emitters
+                - Actions
+            - Utilities
+        - Bindings
+        - Event Tracks
+    - Bundles
+    - Calendars
+        - Appearances
+    - Playlists
