@@ -16,7 +16,7 @@ Download the 'Rship-Ableton' sidecar app and run it. Enter the address and port 
 
 Download the 'rship' Max for Live device and add it to any track in the set.
 
-> NOTE: As of Ableton 12, disabling/enabling or opening the M4L device in the Max editor will create multiple instances of the device which fight over the same UDP port. In order to reconnect to the sidecar, you must quit out of Max entirely and restart Ableton.
+> NOTE: As of Ableton 12, disabling/enabling the M4L device or opening it in the Max editor from Ableton will create multiple instances of the device which fight over the same UDP port. In order to reconnect to the sidecar, you must quit out of Max entirely and restart Ableton.
 
 ## Targets, Actions, and Emitters
 
@@ -44,3 +44,5 @@ Download the 'rship' Max for Live device and add it to any track in the set.
 |                  | - Is playing                      | - Stop                               |
 |                  | - Is triggered                    |                                      |
 | **Cue Point**    |                                   | - Jump                               |
+
+For more information on available Targets in Ableton, please consult the [Live Object Model](https://docs.cycling74.com/max8/vignettes/live_object_model)

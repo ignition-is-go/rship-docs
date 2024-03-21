@@ -17,11 +17,13 @@ Finally, Scenes are optionally placed onto the **Calendar**, which schedules the
 
 - **Rocketship Core**: A centralized server, responsible for federating connected systems. (Can scale horizontally)
 
-- **Machine**: A physical hardware device that runs an Instance.
+- **Machine**: A physical hardware device that runs some software.
 
-- **Executor**: A local process running on a Machine that connects to the Rocketship Core and defines a Service schema.
+- **Service**: The software running on a Machine.
 
-- **Instance**: A copy of a Service, that ties a particular Service to an Executor.
+- **Executor**: An additional piece of software running on a Machine that connects to the Rocketship Core and defines a Service schema.
+
+- **Instance**: A copy of a Service, that ties a particular Service to a particular Executor.
 
 > NOTE: For some systems, an Instance can be directly made into an Executor with the addition of a plugin or module (e.g. Unreal Engine, TouchDesigner); for other systems, the Executor must run as a separate process from the Instance (e.g. Pixera, Disguise). This decision is dependant on a per-integration basis, depending on the available software API of the system. 
 

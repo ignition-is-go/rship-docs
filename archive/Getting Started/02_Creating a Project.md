@@ -1,5 +1,8 @@
+## Creating a project.
 
-# Creating a Project
+After authenticating, you will be greeted by the project page. 
+
+Create a new project or select an existing project.
 
 Create and name a new project. 
 
