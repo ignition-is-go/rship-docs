@@ -1,4 +1,4 @@
-# Ableton Live
+# Rship-Ableton
 
 Ableton Live integrates with Rocketship using a Max for Live device and a sidecar application.
 

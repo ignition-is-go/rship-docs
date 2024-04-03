@@ -1,4 +1,4 @@
-# Apple Vision Pro
+# Rship-VisionOS
 
 The Apple Vision Pro integrates with Rocketship by running a visionOS app that implements the Swift variant of the Rocketship Executor SDK.
 

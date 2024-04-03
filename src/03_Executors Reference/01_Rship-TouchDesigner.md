@@ -1,4 +1,4 @@
-# TouchDesigner
+# Rship-TouchDesigner
 
 The TouchDesigner Executor integrates naturally and easily with Rocketship. Simply load the rship .tox into any TouchDesigner network to eastablish a connection with Rocketship, tag the Base COMPs whose parameters you wish to expose with 'rship', and their custom paramaters will appear as Targets in the rship GUI with Emitters and Actions to observe/set each parameter's values. 
 
