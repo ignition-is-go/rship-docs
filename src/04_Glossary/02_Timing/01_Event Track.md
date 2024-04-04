@@ -1,3 +1,3 @@
 # Event Track
 
-An optional element of a Scene which can be keyframed to control how the Scene unfolds in local, micro-time. 
+A reusable component for programming local, micro-time control. They contain Lanes which hold Keyframes, akin to Emitters and Pulses.
