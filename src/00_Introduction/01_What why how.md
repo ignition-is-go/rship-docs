@@ -1,4 +1,4 @@
-# Introduction
+# What, why, and how?
 
 ## What is Rocketship?
 
