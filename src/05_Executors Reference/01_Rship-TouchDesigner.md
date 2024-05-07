@@ -11,6 +11,10 @@ Notch TOPs can also be tagged 'rship' to expose the parameters of the Notch page
 > 1. Download the rship.tox
 > 2. Import the rship.tox into your TouchDesigner project
 
+## Setup
+
+> 1. Enter the address of the Rocketship Server you wish to connect to
+
 ## Usage
 
 > 1. Add an 'rship' tag to every Base COMP you wish to expose to Rocketship as a Target.
