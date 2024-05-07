@@ -8,6 +8,6 @@ Event Tracks can be thought of as deterministic, on-demand Targets. They are use
 
 If an Event Track is like a Target, its Lanes are like Emitters, and Keyframes are like Pulses. Each Lane is shown as an anchor on the right-hand side of the node which can be used like any other Emitter. 
 
-## Calendar
+## The Calendar
 
 The **Calendar** schedules Scene activation and deactivation in 'global', macro-time. 

@@ -1,4 +1,4 @@
-# Connecting Systems to Rocketship
+# Connecting Services to Rocketship
 
 In order to access the monitoring and control interface for setting up and orchestrating reactive event relationships between different Executors, connect to a Rocketship Server in a web browser to load the GUI. Open up a Chrome-based browser and navigate to the host address of the server you wish to connect to. 
 
