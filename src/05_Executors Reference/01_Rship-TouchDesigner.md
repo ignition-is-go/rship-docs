@@ -13,23 +13,18 @@ Notch TOPs can also be tagged 'rship' to expose the parameters of the Notch page
 
 ## Setup
 
-> 1. Enter the address of the Rocketship Server you wish to connect to
+> 1. In the rship.tox, enter the address of the Rocketship Server you wish to connect to
 
 ## Usage
 
-> 1. Add an 'rship' tag to every Base COMP you wish to expose to Rocketship as a Target.
-> 2. Custom parameters of tagged Base COMPs will appear in Rocketship as Targets.
-> 3. Bind any parameter in the network to a custom parameter on a tagged Base COMP 
->	1. Right-click on an 'rship'-labeled BaseCOMP and choose 'Customize Component'
->	2. Enter a 'Par Name' and choose the parameter's data type and number of values
->	3. Identify the parameter in your TouchDesigner patch you wish to expose to Rocketship
->		1. Right-click on the parameter and click 'Copy Parameter'
->		2. Navigate back to the tagged Base COMP, right-click on the custom parameter, and select 'Paste Bind'
-> 4. Save the project
-> 5. Verify that the custom parameter appears in the Rocketship GUI as a Target
-> 6. To export the output of a node to a custom parameter, drag the node onto the parameter name and select 'Export'
-
-> NOTE: If Targets do not appear immediately in Rocketship, navigate to the rship.tox and pulse Reconnect.
+> 1. Add an 'rship' tag to a Base COMP
+> 2. Create a custom parameters on the tagged Base COMP
+> 3. Bind any other parameter in the network to the custom parameter 
+>	1. Right-click on the parameter and click 'Copy Parameter'
+>	2. Navigate back to the tagged Base COMP, right-click on the custom parameter, and select 'Paste Bind'
+>   3. To export the output of a node to a custom parameter, drag the node onto the parameter name and select 'Export'
+> 4. Pulse Reconnect on the rship.tox
+> 5. Verify the Base COMP and its parameters appear in the Rship GUI as Targets
 
 ## Targets, Actions, and Emitters
 
