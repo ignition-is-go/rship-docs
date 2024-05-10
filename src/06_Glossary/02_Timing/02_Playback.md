@@ -1,3 +1,3 @@
 # Playback
 
-An running instance of an Event Track.
+A running instance of an Event Track.

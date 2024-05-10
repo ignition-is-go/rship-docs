@@ -1,22 +1,22 @@
 # Rship-Ableton
 
-Ableton Live integrates with Rocketship using a Max for Live device and a sidecar application.
+Ableton Live integrates with Rocketship using a Max for Live device and a sidecar application called 'Rship-Ableton'.
 
-The Max for Live Device can be added to any track in the set, and recursively iterates through the Live Object Model to surface the Targets, Actions, and Emitters of the live set.
+The Max for Live Device can be added to any track in the set, and recursively iterates through the Live Object Model to register the Targets, Actions, and Emitters of the live set with Rocketship.
 
-The sidecar application runs separately and bridges the connection between Ableton Live and Rocketship.
+Rship-Ableton runs separately and bridges the connection between Ableton Live and Rocketship.
 
 ## Installation
 
-**Sidecar App**
+**rship.amxd**
 
-Download the 'Rship-Ableton' sidecar app and run it. Enter the address and port of a Rocketship server and connect.
-
-**Rship Device**
-
-Download the 'rship' Max for Live device and add it to any track in the set.
+Download the rship.amxd and add it to any track in the set.
 
 > NOTE: As of Ableton 12, disabling/enabling the M4L device or opening it in the Max editor from Ableton will create multiple instances of the device which fight over the same UDP port. In order to reconnect to the sidecar, you must quit out of Max entirely and restart Ableton.
+
+**Rship-Ableton**
+
+Download the 'Rship-Ableton' sidecar app and run it. Enter the address and port of a Rocketship server and connect.
 
 ## Targets, Actions, and Emitters
 

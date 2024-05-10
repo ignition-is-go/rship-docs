@@ -1,3 +1,3 @@
 # Pulse
 
-A data payload of an Emitter.
+A data packet of an Emitter.

@@ -1,3 +1,3 @@
 # Event Track
 
-A reusable component for programming local, micro-time control. They contain Lanes which hold Keyframes, akin to Emitters and Pulses.
+A reusable component that holds local event timing data. Contains separate Lanes which hold sets of Keyframes.

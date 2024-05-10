@@ -1,3 +1,3 @@
 # Payload
 
-The data carried by an Action command.
+The data carried with an Action command.

@@ -1,3 +1,3 @@
 # Scene Graph
 
-The canvas for defining Bindings within a Scene.
+The workspace for creating Bindings within a Scene.

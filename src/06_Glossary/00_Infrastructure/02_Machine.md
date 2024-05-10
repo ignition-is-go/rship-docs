@@ -1,3 +1,3 @@
 # Machine
 
-The physical hardware running a connected system.
+The physical hardware running a Service.
