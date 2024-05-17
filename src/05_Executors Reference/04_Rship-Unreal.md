@@ -49,7 +49,8 @@ Due to some pesky aspects of Unreal's implementation of C++, we are still workin
 
 ## Targets, Actions, and Emitters
 
-
-| Targets          | Emitters                                  | Actions                  |
-|------------------|-------------------------------------------|--------------------------|
-| **Actors**       | - Any Event dispatcher Parameter          | - Any Function Argument  |
+- Targets: Actors
+  - Emitters:
+    - Any Event dispatcher Parameter
+  - Actions:
+    - Any Function Argument

@@ -2,11 +2,20 @@
 
 ## Targets, Actions, and Emitters
 
+- Targets: Timelines
+  - Emitters:
+    - Timeline position
+  - Actions:
+    - Stop
+    - Start
+    - Set time
 
-| Targets          | Emitters          | Actions                |
-|------------------|-------------------|------------------------|
-| **Timelines**    | - Timeline position | - Stop               |
-|                  |                     | - Start              |
-|                  |                     | - Set time           |
-| **Cues**         | - Cue applied       | - Apply cue          |
-| **Clips**        |                     | - Assign resource    |
+- Targets: Cues
+  - Emitters:
+    - Cue applied
+  - Actions:
+    - Apply cue
+
+- Targets: Clips
+  - Actions:
+    - Assign resource

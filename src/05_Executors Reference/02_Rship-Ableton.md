@@ -20,29 +20,66 @@ Download the 'Rship-Ableton' sidecar app and run it. Enter the address and port 
 
 ## Targets, Actions, and Emitters
 
-| Targets          | Emitters                          | Actions                              |
-|------------------|-----------------------------------|--------------------------------------|
-| **Song**         | - Current song time (in beats)    | - Continue playing                   |
-|                  | - Is playing                      | - Jump to next cue                   |
-|                  |                                   | - Jump to previous cue               |
-|                  |                                   | - Start playing                      |
-|                  |                                   | - Stop playing                       |
-| **Master Track** | - Output meter left               |                                      |
-|                  | - Output meter right              |                                      |
-|                  | - Output meter peak level         |                                      |
-| **Master Mixer** | - Volume                          | - Set volume                         |
-|                  | - Panning                         | - Set panning                        |
-| **Track**        | - Output meter left               |                                      |
-|                  | - Output meter right              |                                      |
-|                  | - Output meter peak level         |                                      |
-| **Mixer Device** | - Volume                          | - Set volume                         |
-|                  | - Panning                         | - Set panning                        |
-|                  | - Track activation (mute/unmute)  | - Set track activation (mute/unmute) |
-| **Device**       | - Is active                       |                                      |
-| **Device Parameter** | - Value                       | - Set value                          |
-| **Clip**         | - Playing position                | - Fire                               |
-|                  | - Is playing                      | - Stop                               |
-|                  | - Is triggered                    |                                      |
-| **Cue Point**    |                                   | - Jump                               |
+- Targets: Song
+  - Emitters:
+    - Current song time (in beats)
+    - Is playing
+  - Actions:
+    - Continue playing
+    - Jump to next cue
+    - Jump to previous cue
+    - Start playing
+    - Stop playing
 
-For more information on available Targets in Ableton, please consult the [Live Object Model](https://docs.cycling74.com/max8/vignettes/live_object_model)
+- Targets: Master Track
+  - Emitters:
+    - Output meter left
+    - Output meter right
+    - Output meter peak level
+
+- Targets: Master Mixer
+  - Emitters:
+    - Volume
+    - Panning
+  - Actions:
+    - Set volume
+    - Set panning
+
+- Targets: Track
+  - Emitters:
+    - Output meter left
+    - Output meter right
+    - Output meter peak level
+
+- Targets: Mixer Device
+  - Emitters:
+    - Volume
+    - Panning
+    - Track activation (mute/unmute)
+  - Actions:
+    - Set volume
+    - Set panning
+    - Set track activation (mute/unmute)
+
+- Targets: Device
+  - Emitters:
+    - Is active
+
+- Targets: Device Parameter
+  - Emitters:
+    - Value
+  - Actions:
+    - Set value
+
+- Targets: Clip
+  - Emitters:
+    - Playing position
+    - Is playing
+    - Is triggered
+  - Actions:
+    - Fire
+    - Stop
+
+- Targets: Cue Point
+  - Actions:
+    - Jump

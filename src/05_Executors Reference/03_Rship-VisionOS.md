@@ -28,19 +28,20 @@ In addition, any SwiftUI component can be made into a Target.
 
 ## Targets, Actions, and Emitters
 
-| Targets                 | Emitters                                    | Actions |
-|-------------------------|---------------------------------------------|---------|
-| **Device**              | - Transform data                            |         |
-| **Left Hand**           | - Fingertips transform data                 |         |
-|                         | - Metacarpal transform data                 |         |
-|                         | - Knuckle transform data                    |         |
-|                         | - Wrist transform data                      |         |
-|                         | - Elbow transform data                      |         |
-| **Right Hand**          | - Fingertips transform data                 |         |
-|                         | - Metacarpal transform data                 |         |
-|                         | - Knuckle transform data                    |         |
-|                         | - Wrist transform data                      |         |
-|                         | - Elbow transform data                      |         |
-| **Gesture Recognition** | - Left hand gesturing                       |         |
-|                         | - Right hand gesturing                      |         |
-|                         | - Both hands gesturing                      |         |
+- Targets: Device
+  - Emitters:
+    - Transform data
+
+- Targets: Left Hand, Right Hand
+  - Emitters:
+    - Fingertips transform data
+    - Metacarpal transform data
+    - Knuckle transform data
+    - Wrist transform data
+    - Elbow transform data
+
+- Targets: Gesture Recognition
+  - Emitters:
+    - Left hand gesturing
+    - Right hand gesturing
+    - Both hands gesturing

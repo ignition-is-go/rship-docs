@@ -10,7 +10,11 @@ The 'Rocketship Status' item is used to visualize and control connection state w
 
 The 'Rocketship Target' item creates a Target when dragged onto the StreamDeck interface. The Target has various Emitters that send Pulses whenever the state of the button/dial/ changes.
 
-| Targets                            | Emitters          | Actions                |
-|------------------------------------|-------------------|------------------------|
-| **Buttons/Dials/Touchscreen**      | - On Pressed      | - Set Icon             |
-|                                    |                   | - Set Text             |     
+## Targets, Emitters, and Actions
+
+- Targets: Buttons/Dials/Touchscreen
+  - Emitters:
+    - On Pressed
+  - Actions:
+    - Set Icon
+    - Set Text

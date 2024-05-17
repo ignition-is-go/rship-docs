@@ -21,9 +21,11 @@ Rocketship has first-class support for Notch TOPs, which can also be tagged 'rsh
 3. Drag and drop parameters onto the rship_buddy
     1. Click on the name of the parameter to reveal the parameter's details, then middle-click and drag from the parameter's lower-case ID onto the rship_buddy
     2. Verify a new custom parameter is created on the rship-tagged Base COMP, on the corresponding Rship_Buddy parameter page
-        1. Each instance of the RshipBuddy.tox is linked to a custom parameter page by ID
+        1. Each instance of the RshipBuddy.tox is associated with a custom parameter page by the name of its parent
     3. Verify the original parameter is bound to the new custom parameter
 4. Pulse 'Reconnect' on the rship.tox or save the .toe and verify the parameter appears in the Rocketship GUI as a Target
+
+> NOTE: As of 2024/05/17 Rship-Touchdesigner currently supports float, int, bool, string, and pulse types. Additional types (RGB, XYZ, etc.) can be added upon request.
 
 ## Usage: Notch TOPs
 
@@ -34,12 +36,24 @@ Rocketship has first-class support for Notch TOPs, which can also be tagged 'rsh
 
 ## Targets, Actions, and Emitters
 
-| Targets            | Emitters                         | Actions                |
-|--------------------|----------------------------------|------------------------|
-| **Base COMPs**     |                                  | - Activate cooking     |
-|                    |                                  | - Deactivate cooking   |
-|                    | - Publish custom par values      | - Set custom par values|
-| **Notch TOPs**     |                                  | - Activate cooking     |
-|                    |                                  | - Deactivate cooking   |
-|					 | - Publish Notch par values       | - Set Notch par values |
-| **Notch Layers**   | - Publish layer par values       | - Set layer par values |
+- Targets: Base COMPs
+  - Emitters:
+    - Publish custom par values
+  - Actions:
+    - Activate cooking
+    - Deactivate cooking
+    - Set custom par values
+
+- Targets: Notch TOPs
+  - Emitters:
+    - Publish Notch par values
+  - Actions:
+    - Activate cooking
+    - Deactivate cooking
+    - Set Notch par values
+
+- Targets: Notch Layers
+  - Emitters:
+    - Publish layer par values
+  - Actions:
+    - Set layer par values
