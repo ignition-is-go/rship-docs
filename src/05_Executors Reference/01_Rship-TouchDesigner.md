@@ -12,22 +12,25 @@ Rocketship has first-class support for Notch TOPs, which can also be tagged 'rsh
 2. Import the rship.tox into a TouchDesigner project
 3. In the rship.tox, enter the address of a Rocketship Server
 
-## Usage: Base COMPs
+## Usage
 
 1. Add an 'rship' tag to any Base COMP
-2. Create a custom parameter on the tagged Base COMP
-3. Bind any other parameter in the network to the custom parameter 
-	1. Right-click on the parameter and click 'Copy Parameter'
-    2. Navigate to the tagged Base COMP, right-click on the custom parameter, and select 'Paste Bind'
-    3. To export the output of a node directly to a custom parameter, drag the node onto the custom parameter and select 'Export'
-4. Pulse 'Reconnect' on the rship.tox
-
-> NOTE: When tagging a new OP 'rship', you must pulse 'Reconnect' in order to register it. 
-> When adding a new custom parameter to a Base COMP, you must either save the .toe or pulse 'Reconnect' to register it.
+    1. Pulse 'Reconnect' on the rship.tox or save the .toe and verify the COMP appears in the Rocketship GUI as a Target
+2. Add the rship_buddy.tox container as a child component anywhere inside the rhsip-tagged Base COMP
+    1. Activate the rship_buddy node (click the plus button in the bottom-right corner of the node)
+3. Drag and drop parameters onto the rship_buddy
+    1. Click on the name of the parameter to reveal the parameter's details, then middle-click and drag from the parameter's lower-case ID onto the rship_buddy
+    2. Verify a new custom parameter is created on the rship-tagged Base COMP, on the corresponding Rship_Buddy parameter page
+        1. Each instance of the RshipBuddy.tox is linked to a custom parameter page by ID
+    3. Verify the original parameter is bound to the new custom parameter
+4. Pulse 'Reconnect' on the rship.tox or save the .toe and verify the parameter appears in the Rocketship GUI as a Target
 
 ## Usage: Notch TOPs
 
 1. Add an 'rship' tag to any Notch TOP
+2. Pulse 'Reconnect' on the rship.tox or save the .toe and verify the parameter appears in the Rocketship GUI as a Target
+
+> NOTE: When tagging a new OP 'rship', or adding a new custom parameter to a tagged Base COMP, you must pulse 'Reconnect' or save the .toe in order to register it. 
 
 ## Targets, Actions, and Emitters
 
