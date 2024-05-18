@@ -12,7 +12,7 @@ Rship-Ableton runs separately and bridges the connection between Ableton Live an
 
 Download the rship.amxd and add it to any track in the set.
 
-> NOTE: As of Ableton 12, disabling/enabling the M4L device or opening it in the Max editor from Ableton will create multiple instances of the device which fight over the same UDP port. In order to reconnect to the sidecar, you must quit out of Max entirely and restart Ableton.
+> NOTE: As of Ableton 12, disabling the M4L device, or opening the device in the Max editor, will disconnect Ableton from Rocketship.
 
 **Rship-Ableton**
 
@@ -20,20 +20,28 @@ Download the 'Rship-Ableton' sidecar app and run it. Enter the address and port 
 
 ## Targets, Actions, and Emitters
 
+> NOTE: The term 'float, beats' refers to a float value in Ableton's internal measure-beat timing system, where each whole number corresponds to one beat.
+
 - Targets: Song
   - Emitters:
-    - Current song time (in beats)
-    - Is playing
+    - Is playing (boolean)
+    - Song Tempo (float, BPM)
+    - Current song time (float, beats)
   - Actions:
-    - Continue playing
-    - Jump to next cue
-    - Jump to previous cue
     - Start playing
+    - Continue playing
     - Stop playing
+    - Set Song Tempo (BPM, 20-999)
+
+- Targets: Locators (Cue Points)
+  - Emitters:
+    - Time (float, beats)
+  - Actions:
+    - Jump
 
 - Targets: Master Track
   - Emitters:
-    - Output meter left
+    - Output meter left (float)
     - Output meter right
     - Output meter peak level
 
