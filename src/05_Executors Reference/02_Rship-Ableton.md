@@ -6,17 +6,19 @@ The Max for Live Device can be added to any track in the set, and recursively it
 
 Rship-Ableton runs separately and bridges the connection between Ableton Live and Rocketship.
 
-## Installation
+## Installation and Setup
 
 **rship.amxd**
 
-Download the rship.amxd and add it to any track in the set.
+1. Download the rship.amxd and add it to any track in the set
+2. Enter a unique Service ID (the name of the live set)
 
 > NOTE: As of Ableton 12, disabling the M4L device, or opening the device in the Max editor, will disconnect Ableton from Rocketship.
 
 **Rship-Ableton**
 
-Download the 'Rship-Ableton' sidecar app and run it. Enter the address and port of a Rocketship server and connect.
+1. Download and run the 'Rship-Ableton' sidecar app
+2. Enter the address and port of a Rocketship server to connect
 
 ## Targets, Actions, and Emitters
 
