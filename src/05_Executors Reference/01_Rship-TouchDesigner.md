@@ -15,7 +15,7 @@ Rocketship has first-class support for Notch TOPs, which can also be tagged 'rsh
 ## Usage
 
 1. Add an 'rship' tag to any Base COMP
-    1. Pulse 'Reconnect' on the rship.tox or save the .toe and verify the COMP appears in the Rocketship GUI as a Target
+    1. Pulse 'Reconnect' on the rship.tox and verify the COMP appears in the Rocketship GUI as a Target
 2. Add the rship_buddy.tox container as a child component anywhere inside the rhsip-tagged Base COMP
     1. Activate the rship_buddy node (click the plus button in the bottom-right corner of the node)
 3. Drag and drop parameters onto the rship_buddy
